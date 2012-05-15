@@ -25,13 +25,13 @@ from rtmpy import protocol, versions
 from rtmpy.protocol import handshake
 
 
-class ClientProtocol(protocol.BaseProtocol):
+class ClientProtocol(twisted_protocol.BaseProtocol):
     """
     Client RTMP Protocol.
     """
 
     version = versions.FLASH_MIN_H264
-    protocolVersion = protocol.RTMP_PROTOCOL_VERSION
+    protocolVersion = protocol.RTMPE_PROTOCOL_VERSION
 
     def connectionMade(self):
         """
